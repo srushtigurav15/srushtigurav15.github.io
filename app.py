@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Veritas News</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    background:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#1f3c88;
+}
+
+.nav-links a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#333;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1495020689067-958852a7765e') no-repeat center center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Box */
+.hero-box{
+    background:rgba(255,255,255,0.85);
+    padding:60px;
+    width:55%;
+    text-align:center;
+    border:2px solid white;
+    box-shadow:0 0 30px rgba(0,0,0,0.3);
+}
+
+.hero-box h1{
+    font-size:45px;
+    color:#1f3c88;
+}
+
+.hero-box p{
+    font-size:18px;
+    color:#333;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 30px;
+    background:#1f3c88;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#142a5c;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">Veritas News</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Info</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="hero-box">
+        <h1>Veritas News</h1>
+        <p>Welcome to Fake News Detection System<br>
+        Combating misinformation in the digital age.<br>
+        Your trusted source for verified news.</p>
+        <button class="btn">Continue</button>
+    </div>
+</div>
+
+</body>
+</html>
