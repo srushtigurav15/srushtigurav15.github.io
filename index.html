@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Srushti Portfolio</title>
+  <title>Fake News Detection - Srushti</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(to right, #667eea, #764ba2);
+      background: linear-gradient(to right, #141e30, #243b55);
       color: white;
+      text-align: center;
     }
 
     .container {
-      padding: 100px 20px;
+      padding: 80px 20px;
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 38px;
+      margin-bottom: 10px;
     }
 
-    p {
-      font-size: 18px;
+    textarea {
+      width: 80%;
+      height: 120px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
     }
 
     button {
-      padding: 12px 25px;
+      margin-top: 15px;
+      padding: 12px 30px;
       font-size: 16px;
       border: none;
       border-radius: 25px;
-      background-color: red;
+      background-color: #ff4b2b;
       color: white;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: darkred;
+      background-color: #ff1c00;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h1>Hi, I'm Srushti 👋</h1>
-    <p>I create beautiful websites and logos.</p>
-    <button>Contact Me</button>
+    <h1>Fake News Detection System 📰</h1>
+    <p>Enter news text below:</p>
+
+    <textarea id="newsText" placeholder="Paste your news here..."></textarea>
+    <br>
+    <button onclick="checkNews()">Check News</button>
+
+    <div id="result"></div>
   </div>
+
+  <script>
+    function checkNews() {
+      var text = document.getElementById("newsText").value;
+      var result = document.getElementById("result");
+
+      if (text.length < 20) {
+        result.innerHTML = "⚠️ Please enter valid news content.";
+        result.style.color = "yellow";
+      } else {
+        // Simple demo logic
+        if (text.toLowerCase().includes("shocking") || 
+            text.toLowerCase().includes("100% guarantee") || 
+            text.toLowerCase().includes("click here")) {
+
+          result.innerHTML = "🚨 This looks like FAKE News!";
+          result.style.color = "red";
+        } else {
+          result.innerHTML = "✅ This appears to be REAL News.";
+          result.style.color = "lightgreen";
+        }
+      }
+    }
+  </script>
+
 </body>
 </html>
