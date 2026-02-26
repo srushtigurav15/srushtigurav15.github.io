@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fake News Detection - Srushti</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: white;
-      text-align: center;
-    }
+<title>Veritas News</title>
 
-    .container {
-      padding: 80px 20px;
-    }
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
 
-    h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+/* Navbar */
+.navbar{
+    background:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
 
-    textarea {
-      width: 80%;
-      height: 120px;
-      padding: 10px;
-      border-radius: 10px;
-      border: none;
-      font-size: 16px;
-    }
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#1f3c88;
+}
 
-    button {
-      margin-top: 15px;
-      padding: 12px 30px;
-      font-size: 16px;
-      border: none;
-      border-radius: 25px;
-      background-color: #ff4b2b;
-      color: white;
-      cursor: pointer;
-    }
+.nav-links a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#333;
+}
 
-    button:hover {
-      background-color: #ff1c00;
-    }
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1495020689067-958852a7765e') no-repeat center center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-    #result {
-      margin-top: 20px;
-      font-size: 22px;
-      font-weight: bold;
-    }
-  </style>
+/* Glass Box */
+.hero-box{
+    background:rgba(255,255,255,0.85);
+    padding:60px;
+    width:55%;
+    text-align:center;
+    border:2px solid white;
+    box-shadow:0 0 30px rgba(0,0,0,0.3);
+}
+
+.hero-box h1{
+    font-size:45px;
+    color:#1f3c88;
+}
+
+.hero-box p{
+    font-size:18px;
+    color:#333;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 30px;
+    background:#1f3c88;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#142a5c;
+}
+
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Fake News Detection System 📰</h1>
-    <p>Enter news text below:</p>
 
-    <textarea id="newsText" placeholder="Paste your news here..."></textarea>
-    <br>
-    <button onclick="checkNews()">Check News</button>
+<div class="navbar">
+    <div class="logo">Veritas News</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Info</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
 
-    <div id="result"></div>
-  </div>
-
-  <script>
-    function checkNews() {
-      var text = document.getElementById("newsText").value;
-      var result = document.getElementById("result");
-
-      if (text.length < 20) {
-        result.innerHTML = "⚠️ Please enter valid news content.";
-        result.style.color = "yellow";
-      } else {
-        // Simple demo logic
-        if (text.toLowerCase().includes("shocking") || 
-            text.toLowerCase().includes("100% guarantee") || 
-            text.toLowerCase().includes("click here")) {
-
-          result.innerHTML = "🚨 This looks like FAKE News!";
-          result.style.color = "red";
-        } else {
-          result.innerHTML = "✅ This appears to be REAL News.";
-          result.style.color = "lightgreen";
-        }
-      }
-    }
-  </script>
+<div class="hero">
+    <div class="hero-box">
+        <h1>Veritas News</h1>
+        <p>Welcome to Fake News Detection System<br>
+        Combating misinformation in the digital age.<br>
+        Your trusted source for verified news.</p>
+        <button class="btn">Continue</button>
+    </div>
+</div>
 
 </body>
 </html>
